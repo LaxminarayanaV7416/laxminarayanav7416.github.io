@@ -7,11 +7,9 @@ title: Home
   <h4>Bio</h4>
 
   <p>
-    I am a <b><u>PhD aspirant</u></b> in <b><u>Computer Science</u></b>, currently pursuing my <b><u>Master's in
-        Computer
-        Science</u></b> at
-    <b><u>Saint Louis University</u></b>.
-    I am also working as a Graduate Research Assistant at the <a href="https://ankit.website/lab" target="_blank">
+    I am an <b><u>upcoming Ph.D Student</u></b> in <b><u>Computer Science</u></b>, at
+    <b><u>Univeristy of Notre Dame</u>, South Bend, IN</b>.
+    I am currently working as a Graduate Research Assistant at the <a href="https://ankit.website/lab" target="_blank">
       sUAS—Human-Centered Computing Lab (sUAS HCC) </a>,
     advised by <a href="https://ankit.website/aboutme" target="_blank">Dr. Ankit Agarwal</a>,
     in collaboration with the <a href="https://ccl.cse.nd.edu/" target="_blank"> Cooperative Computing Lab </a>, advised
@@ -48,6 +46,13 @@ title: Home
 <div class="docs-section" id="education">
   <h4>Education</h4>
   <div class="paper">
+    <p class="title"><b>Univeristy of Notre Dame<b style="float:right;">Aug. 2025 - Present</b></b></p>
+
+    <p>Ph.D. in Computer Science</p>
+    <p>High-Performance Computing</p>
+  </div>
+
+  <div class="paper">
     <p class="title"><b>Saint Louis University<b style="float:right;">Aug. 2023 - May 2025</b></b></p>
 
     <p>M.Sc. in Computer Science</p>
@@ -64,7 +69,10 @@ title: Home
 
   <ul class="tab-nav">
     <li>
-      <div class="button active" data-ref="#news-2024">2024</div>
+      <div class="button active" data-ref="#news-2025">2025</div>
+    </li>
+    <li>
+      <div class="button" data-ref="#news-2024">2024</div>
     </li>
     <li>
       <div class="button" data-ref="#news-2023-past">2023-Past</div>
@@ -74,7 +82,17 @@ title: Home
   <!-- UNCOMMENT BELOW ONCE YOU START ADDING THE NEWS -->
 
   <div class="tab-content">
-    <div class="tab-pane active" id="news-2024">
+
+    <div class="tab-pane active" id="news-2025">
+      {% assign news2025 = site.data.news.news | where: "year", "2025" %}
+      {% for news in news2025 %}
+      <div class="news">
+        <li>{{ news.content }}</li>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="tab-pane" id="news-2024">
       {% assign news2024 = site.data.news.news | where: "year", "2024" %}
       {% for news in news2024 %}
       <div class="news">
