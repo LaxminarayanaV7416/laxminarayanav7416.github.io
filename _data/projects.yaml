@@ -1,25 +1,53 @@
 projects:
   - title: "Safety Aware Drone Ecosystem's Back end and Front end (SADE)"
+    titleAcronym: "SADE GUI & Backend"
     subtitle: "SLU Graduate Research Assistant"
     timeline: "July 2024 - Present"
     description: "Safety Aware Drone Ecosystem's Back end and Front end (SADE) Description"
-    workContribution: "<ul><li>Implemented the whole back end from scratch with MQTT and Database integration to facilitate the transfer of drone configuration configured by user to SADE simulation stack which comprises of PX4, Gazebo and Unreal Game Engine to enable simulation. </li><li>Optimized the existing front end to support real time changes from user for butter smooth experience. Also integrated Cesium JS components to enable Google Maps 3D tiles for precise location configuration for better user experience. </li><li>Worked with Tech Stack Python, Fast API, Mosquitto MQTT, Mongo DB, Docker, GitHub Actions, React JS, Cesium JS, Docker Compose</li></ul>"
+    workContribution:
+      - "Implemented the whole back end from scratch with MQTT and Database integration to facilitate the transfer of drone configuration configured by user to SADE simulation stack which comprises of PX4, Gazebo and Unreal Game Engine to enable simulation."
+      - "Optimized the existing front end to support real time changes from user for butter smooth experience. Also integrated Cesium JS components to enable Google Maps 3D tiles for precise location configuration for better user experience."
+      - "Worked with Tech Stack Python, Fast API, Mosquitto MQTT, Mongo DB, Docker, GitHub Actions, React JS, Cesium JS, Docker Compose"
     identifier: "sade-be-fe"
+    githubLink: "https://github.com/laxminarayanav7416/sade"
+    active: true
+
   - title: "Safety Aware Drone Ecosystem (SADE) Simulation Plugins"
+    titleAcronym: "SADE-Sim Plugins"
     subtitle: "SLU Graduate Research Assistant"
     timeline: "July 2024 - Present"
     description: "Safety Aware Drone Ecosystem's Simulation Plugins"
-    workContribution: "<ul><li>Developed and Managing the Gazebo physics engine plugins like Real time Terrain Loaders when drone fly using the terrain information from the 3D tiles of Cesium for simulating precise taking off, landing, obstacles for real time collision and more physics operation</li><li>improvised the existing wind plugin from PX4 Gazebo as per the SADE project requirements in real time while applying the continuous wind force on the simulated drones in simulation. </li><li>Developed a Drone Pose sender (Gazebo Plugin) and Receiver (CLI tool) which basically sends the Pose of Drone from gazebo in real time as UDP packets and Pose Receiver will be receiving the UDP packets in real time. This includes real time Endian encoding and decoding.</li><li>Worked with Tech Stack C++ 11, SDF, Gazebo 11 C++ library, ROS Noetic, Linux Bash Scripts</li></ul>"
+    workContribution:
+      - "Developed and Managing the Gazebo physics engine plugins like Real time Terrain Loaders when drone fly using the terrain information from the 3D tiles of Cesium for simulating precise taking off, landing, obstacles for real time collision and more physics operation"
+      - "Improvised the existing wind plugin from PX4 Gazebo as per the SADE project requirements in real time while applying the continuous wind force on the simulated drones in simulation"
+      - "Developed a Drone Pose sender (Gazebo Plugin) and Receiver (CLI tool) which basically sends the Pose of Drone from gazebo in real time as UDP packets and Pose Receiver will be receiving the UDP packets in real time. This includes real time Endian encoding and decoding"
+      - "Worked with Tech Stack C++ 11, SDF, Gazebo 11 C++ library, ROS Noetic, Linux Bash Scripts"
     identifier: "sade-simulation-plugins"
+    githubLink: "https://github.com/laxminarayanav7416/sade"
+    active: false
+
   - title: "Safety Aware Drone Ecosystem (SADE) Workflow Management"
+    titleAcronym: "SADE Workflow"
     subtitle: "SLU Graduate Research Assistant"
     timeline: "July 2024 - Present"
     description: "Safety Aware Drone Ecosystem's Workflow Management"
-    workContribution: "<ul><li>Developed the workflow management system for integrating and scaling of Unreal Engine Pods, Unreal Pixel Streaming Pods, GUI and Back end Pods, PX4 Auto Pilot Pods and Gazebo Pods. </li><li>Unreal Engine Pods share the GPU resources, we achieved this using NVIDIA Container toolkit, and streaming the display over network via Pixel Streaming to Front end. </li><li>Worked with Tech Stack Python, Shell Script, Docker, Docker compose </li></ul>"
+    workContribution:
+      - "Developed the workflow management system for integrating and scaling of Unreal Engine Pods, Unreal Pixel Streaming Pods, GUI and Back end Pods, PX4 Auto Pilot Pods and Gazebo Pods"
+      - "Unreal Engine Pods share the GPU resources, we achieved this using NVIDIA Container toolkit, and streaming the display over network via Pixel Streaming to Front end"
+      - "Worked with Tech Stack Python, Shell Script, Docker, Docker compose"
     identifier: "sade-workflow-management"
+    githubLink: "https://github.com/laxminarayanav7416/sade"
+    active: false
+
   - title: "Drone Response (DR) Live Camera feed pipeline"
+    titleAcronym: "DR Live Camera"
     subtitle: "SLU Graduate Research Assistant"
     timeline: "July 2024 - Present"
     description: "Safety Aware Drone Ecosystem's Workflow Management"
-    workContribution: "<ul><li>Implemented the whole back end from scratch with MQTT and Database integration to facilitate the transfer of drone configuration configured by user to SADE simulation stack which comprises of PX4, Gazebo and Unreal Game Engine to enable simulation. </li><li>Optimized the existing front end to support real time changes from user for butter smooth experience. Also integrated Cesium JS components to enable Google Maps 3D tiles for precise location configuration for better user experience. </li><li>Worked with Tech Stack Python, Fast API, Mosquitto MQTT, Mongo DB, Docker, GitHub Actions, React JS, Cesium JS, Docker Compose</li></ul>"
+    workContribution:
+      - "Implemented the whole back end from scratch with MQTT and Database integration to facilitate the transfer of drone configuration configured by user to SADE simulation stack which comprises of PX4, Gazebo and Unreal Game Engine to enable simulation"
+      - "Optimized the existing front end to support real time changes from user for butter smooth experience. Also integrated Cesium JS components to enable Google Maps 3D tiles for precise location configuration for better user experience"
+      - "Worked with Tech Stack Python, Fast API, Mosquitto MQTT, Mongo DB, Docker, GitHub Actions, React JS, Cesium JS, Docker Compose"
     identifier: "dr-camera-feed"
+    githubLink: "https://github.com/laxminarayanav7416/sade"
+    active: false

@@ -3,4 +3,11 @@ talks:
     date: July 6th, 2026
     location: Montreal, Canada
     url: https://se4es.uibk.ac.at/
+    tag: Conference
     year: 2026
+  - title: "Autonomous deployment using Github Actions (CI/CD) pipeline setup and best practices (Guest lecture) at <b>Saint Louis University</b>"
+    date: November 2nd, 2024
+    location: Saint Louis, MO, USA
+    tag: Guest Lecture
+    # url: https://se4es.uibk.ac.at/
+    year: 2024

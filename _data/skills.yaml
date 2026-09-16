@@ -1,0 +1,115 @@
+nodes:
+  - id: lax
+    name: "Laxminarayana Vadnala"
+    role: "Ph.D. Student"
+    group: "Me"
+    url: "https://laxminarayanav7416.github.io"
+    primary: true
+
+  - id: doug-thain
+    name: "Douglas Thain"
+    role: "Advisor, University of Notre Dame"
+    group: "Advisor"
+    url: "https://dthain.github.io/"
+
+  - id: ccl
+    name: "Cooperative Computing Lab"
+    role: "Research Lab"
+    group: "Lab"
+    url: "https://ccl.cse.nd.edu/"
+
+  - id: ankit-agarwal
+    name: "Ankit Agarwal"
+    role: "Former Advisor, Saint Louis University"
+    group: "Advisor"
+    url: "https://ankit.website/"
+
+  - id: taskvine
+    name: "TaskVine"
+    role: "Distributed Computing System"
+    group: "Project"
+    url: "https://cctools.readthedocs.io/en/latest/taskvine/"
+
+  - id: sade
+    name: "SADE"
+    role: "Safety-Aware Drone Ecosystem"
+    group: "Project"
+
+  - id: notre-dame
+    name: "University of Notre Dame"
+    role: "Institution"
+    group: "Institution"
+    url: "https://www.nd.edu/"
+
+  - id: slu
+    name: "Saint Louis University"
+    role: "Institution"
+    group: "Institution"
+    url: "https://www.slu.edu/"
+
+links:
+  - source: lax
+    target: doug-thain
+    label: "Ph.D. Advisor"
+    weight: 3
+
+  - source: lax
+    target: ccl
+    label: "Research Lab"
+    weight: 3
+
+  - source: doug-thain
+    target: ccl
+    label: "Faculty"
+    weight: 2
+
+  - source: lax
+    target: notre-dame
+    label: "Ph.D."
+    weight: 2
+
+  - source: lax
+    target: ankit-agarwal
+    label: "Former Advisor"
+    weight: 2
+
+  - source: lax
+    target: slu
+    label: "M.Sc."
+    weight: 2
+
+  - source: lax
+    target: taskvine
+    label: "Research"
+    weight: 2
+
+  - source: ccl
+    target: taskvine
+    label: "System"
+    weight: 2
+
+  - source: lax
+    target: sade
+    label: "Research Project"
+    weight: 2
+
+  - source: ankit-agarwal
+    target: sade
+    label: "Project Collaboration"
+    weight: 1
+
+groups:
+  - name: Me
+    color: "#111111"
+  - name: Advisor
+    color: "#33C3F0"
+  - name: Lab
+    color: "#2ca02c"
+  - name: Project
+    color: "#ff7f0e"
+  - name: Institution
+    color: "#9467bd"
+  - name: Collaborator
+    color: "#d62728"
+  - name: Publication
+    color: "#8c564b"

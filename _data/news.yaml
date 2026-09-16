@@ -1,17 +1,32 @@
 
-# group tags: Career, Service, Talk, Publication, Award
+# group tags: Career, Service, Talk, Publication, Award, Achievement
 news:
-  - content: 'Got Admission confirmation for Ph.D at <b style="color:#fa8072;">University of Notre Dame</b> in Department of Computer Science under <b style="color:#fa8072;">Professor Douglas Thain</b> in stream of <b>High-Perfromance Computing</b>.'
-    date: "April, 2025"
+  - content: '<b>Presented</b> our work on <b>SADE-SIM: A Scalable Simulation Platform for Validating City-Scale Multi-sUAS Missions</b> at <a href="https://se4es.uibk.ac.at/">SE4ES 2026</a> in Montreal, Canada'
+    date: "July 6, 2026"
+    group_tag: Talk
+    filter_tag: current
+
+  - content: '<b>paper</b> to <b>2nd International Workshop on Software Engineering for Engineering Simulations, and Simulation Engineering for Engineering Software (SE4ES) 2026</b> with title <b>SADE-SIM: A Scalable Simulation Platform for Validating City-Scale Multi-sUAS Missions</b> got accepted'
+    date: "April 2, 2026"
+    group_tag: Publication
+    filter_tag: current
+
+  - content: 'Got Admission confirmation for Ph.D at <b>University of Notre Dame</b> in Department of Computer Science will start working with <b>Professor Douglas Thain</b> in stream of <b>High-Perfromance Computing</b>.'
+    date: "March 24, 2025"
     group_tag: Career
     filter_tag: current
 
-  - content: 'Joined <b style="color:#fa8072;">sUAS—Human-Centered Computing Lab (sUAS HCC)</b> under <b style="color:#fa8072;">Dr. Ankit Agarwal</b> as Graduate Research Assistant at SLU.'
-    date: "July, 2024"
+  - content: 'As part of <b>sUAS—Human-Centered Computing Lab (sUAS HCC)</b> in collaboration with <b>Dr. Douglas Thain</b>, from <b>Cooperative Computing Lab</b> at <b>University of Notre Dame</b>, we successfully deployed the SADE-SIM frontend platform'
+    date: "August 19, 2024"
+    group_tag: Achievement
+    filter_tag: past
+
+  - content: 'Joined <b>sUAS—Human-Centered Computing Lab (sUAS HCC)</b> under <b>Dr. Ankit Agarwal</b> as Graduate Research Assistant at SLU.'
+    date: "July 2, 2024"
     group_tag: Career
     filter_tag: past
 
-  - content: '<b>Aug., 2023</b>&nbsp;&nbsp;&nbsp;&nbsp; Started at SLU as M.Sc. in Computer Science Student.'
-    date: "August, 2023"
+  - content: 'Started at SLU as M.Sc. in Computer Science Student.'
+    date: "August 21, 2023"
     group_tag: Career
     filter_tag: past

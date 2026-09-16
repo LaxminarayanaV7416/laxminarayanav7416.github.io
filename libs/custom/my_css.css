@@ -1871,6 +1871,7 @@ html[data-theme="dark"] .has-docked-nav .navbar > .container {
   overflow-x: auto !important;
   white-space: nowrap !important;
   scrollbar-width: none !important;
+  list-style: none !important;
 }
 
 .navbar-list::-webkit-scrollbar {
@@ -1880,6 +1881,12 @@ html[data-theme="dark"] .has-docked-nav .navbar > .container {
 .navbar-item {
   float: none !important;
   margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.navbar-item::marker {
+  content: "" !important;
 }
 
 /* Larger, more readable navbar text */
@@ -1949,4 +1956,21 @@ html[data-theme="dark"] .navbar-link.active {
     padding: 9px 13px !important;
     font-size: 11px !important;
   }
+}
+
+sup {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--site-accent-soft);
+  color: var(--site-accent-dark);
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+html[data-theme="dark"] sup {
+  color: var(--site-accent);
 }

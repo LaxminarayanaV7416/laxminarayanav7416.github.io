@@ -87,11 +87,11 @@ $(document).ready(function () {
     })
   }
 
-  function initCollaborationGraph() {
-    var graphContainer = document.getElementById("collaboration-graph");
-    var nodesScript = document.getElementById("collaboration-graph-nodes");
-    var linksScript = document.getElementById("collaboration-graph-links");
-    var groupsScript = document.getElementById("collaboration-graph-groups");
+  function initGraph(graph_starter = "skills-graph") {
+    var graphContainer = document.getElementById(`${graph_starter}`);
+    var nodesScript = document.getElementById(`${graph_starter}-nodes`);
+    var linksScript = document.getElementById(`${graph_starter}-links`);
+    var groupsScript = document.getElementById(`${graph_starter}-groups`);
 
     if (!graphContainer || !nodesScript || !linksScript || typeof d3 === "undefined") {
       return;
@@ -135,7 +135,7 @@ $(document).ready(function () {
 
     var tooltip = d3.select(graphContainer)
       .append("div")
-      .attr("class", "collaboration-graph-tooltip");
+      .attr("class", "skills-graph-tooltip");
 
     var zoom = d3.zoom()
       .scaleExtent([0.45, 3])
@@ -238,7 +238,7 @@ $(document).ready(function () {
 
     buildLegend();
 
-    $("#collaboration-graph-reset").on("click", function() {
+    $(`#${graph_starter}-reset`).on("click", function() {
       svg.transition()
         .duration(300)
         .call(zoom.transform, d3.zoomIdentity);
@@ -322,7 +322,7 @@ $(document).ready(function () {
     }
 
     function buildLegend() {
-      var legendContainer = document.getElementById("collaboration-graph-legend");
+      var legendContainer = document.getElementById(`${graph_starter}-legend`);
 
       if (!legendContainer) {
         return;
@@ -336,10 +336,10 @@ $(document).ready(function () {
 
       groups.forEach(function(group) {
         var item = document.createElement("span");
-        item.className = "collaboration-graph-legend-item";
+        item.className = `${graph_starter}-legend-item`;
 
         var swatch = document.createElement("span");
-        swatch.className = "collaboration-graph-legend-swatch";
+        swatch.className = `${graph_starter}-legend-swatch`;
         swatch.style.backgroundColor = color(group);
 
         var label = document.createElement("span");
@@ -397,6 +397,7 @@ $(document).ready(function () {
 
   init();
   initThemeToggle();
-  initCollaborationGraph();
+  initGraph("collaboration-graph");
+  initGraph("skills-graph");
 
 });

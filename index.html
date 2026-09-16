@@ -124,8 +124,6 @@ title: Home
     </li>
   </ul>
 
-  <!-- UNCOMMENT BELOW ONCE YOU START ADDING THE NEWS -->
-
   <div class="tab-content">
 
       <div class="tab-pane active" id="news-current">
@@ -138,7 +136,7 @@ title: Home
               {{ news.group_tag }}
             </span>
           </div>
-      
+
           <div class="news-content">
             {{ news.content }}
           </div>
@@ -157,7 +155,7 @@ title: Home
               {{ news.group_tag }}
             </span>
           </div>
-      
+
           <div class="news-content">
             {{ news.content }}
           </div>
@@ -169,99 +167,48 @@ title: Home
   </div>
 </div>
 
+
+
+
 <!-- ========== Projects ========== -->
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
-  <!-- <p>Most of the projects are having GitHub link and proper documentation</a>.<br />
-  </p> -->
+
   <ul class="tab-nav">
+    {% for project in site.data.projects.projects %}
     <li>
-      <div class="button" data-ref="#sade-be-fe">SADE GUI & Backend</div>
+      {% if project.active == true %}
+      <div class="button active" data-ref="#{{ project.identifier }}">{{ project.titleAcronym }}</div>
+      {% else %}
+      <div class="button" data-ref="#{{ project.identifier }}">{{ project.titleAcronym }}</div>
+      {% endif %}
     </li>
-    <li>
-      <div class="button active" data-ref="#sade-simulation-plugins">SADE Sim-Plugins</div>
-    </li>
-    <li>
-      <div class="button" data-ref="#sade-workflow-management">SADE Workflow</div>
-    </li>
-    <li>
-      <div class="button" data-ref="#dr-camera-feed">DR live cam</div>
-    </li>
+    {% endfor %}
   </ul>
 
-  <!-- Tab: sade backend frontend -->
   <div class="tab-content">
-
-    <div class="tab-pane" id="sade-be-fe">
-      {% assign projects = site.data.projects.projects | where: "identifier", "sade-be-fe" %}
-      {% for project in projects %}
+    {% for project in site.data.projects.projects %}
+    {% if project.active == true %}
+    <div class="tab-pane active" id="{{ project.identifier }}">
+    {% else %}
+    <div class="tab-pane" id="{{ project.identifier }}">
+    {% endif %}
       <div class="paper">
         <h5>{{ project.title }}</h5>
-        <p>{{ project.subtitle }} <b>({{ project.timeline }})</b></p>
+        <p>{{ project.subtitle }}</p> <span class="button"><b>({{ project.timeline }})</b></span>
         <div>
           <p>{{ project.description }} </p>
         </div>
         <div>
-          {{ project.workContribution }}
+          <ul>
+            {% for contribution in project.workContribution %}
+            <li>{{ contribution }}</li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
-      {% endfor %}
     </div>
-
-    <!-- Tab: sade plugins -->
-
-    <div class="tab-pane active" id="sade-simulation-plugins">
-      {% assign projects = site.data.projects.projects | where: "identifier", "sade-simulation-plugins" %}
-      {% for project in projects %}
-      <div class="paper">
-        <h5>{{ project.title }}</h5>
-        <p>{{ project.subtitle }} <b>({{ project.timeline }})</b></p>
-        <div>
-          <p>{{ project.description }} </p>
-        </div>
-        <div>
-          {{ project.workContribution }}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!-- Tab: sade workflow management -->
-
-    <div class="tab-pane" id="sade-workflow-management">
-      {% assign projects = site.data.projects.projects | where: "identifier", "sade-workflow-management" %}
-      {% for project in projects %}
-      <div class="paper">
-        <h5>{{ project.title }}</h5>
-        <p>{{ project.subtitle }} <b>({{ project.timeline }})</b></p>
-        <div>
-          <p>{{ project.description }} </p>
-        </div>
-        <div>
-          {{ project.workContribution }}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!-- Tab: Drone response camera live stream -->
-
-    <div class="tab-pane" id="dr-camera-feed">
-      {% assign projects = site.data.projects.projects | where: "identifier", "dr-camera-feed" %}
-      {% for project in projects %}
-      <div class="paper">
-        <h5>{{ project.title }}</h5>
-        <p>{{ project.subtitle }} <b>({{ project.timeline }})</b></p>
-        <div>
-          <p>{{ project.description }} </p>
-        </div>
-        <div>
-          {{ project.workContribution }}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
+    {% endfor %}
   </div>
 </div>
 
@@ -270,10 +217,7 @@ title: Home
   <h4>Publications</h4>
 
   <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google
-      Scholar</a>.<br />
-    <sup><b>FA</b></sup> indicates first Author contribution.<br />
-    <sup><b>EQ</b></sup> indicates equal contribution.<br />
-  </p>
+      Scholar</a>.</p>
 
   <ul class="tab-nav">
     <!--<li>
@@ -298,11 +242,17 @@ title: Home
         <p><sup><b>{{ paper.tag }}</b></sup>{{ paper.authors }}</p>
         <p><i>{{ paper.venue }}</i></p>
         <div class="paper-buttons">
+            {% if paper.preprint==true %}
+            <a class="button" target="_blank">Preprint</a>
+            {% endif %}
           {% if paper.paper_pdf %}
           <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
           {% endif %}
           {% if paper.code %}
           <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
+          {% if paper.doi %}
+          <a class="button" href="{{ paper.doi }}" target="_blank">doi: {{ paper.doi }}</a>
           {% endif %}
         </div>
       </div>
@@ -316,7 +266,7 @@ title: Home
       {% for paper in papersall %}
       <div class="paper">
         <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors }}</p>
+        <p><sup><b>{{ paper.tag }}</b></sup>{{ paper.authors }}</p>
         <p><i>{{ paper.venue }}</i></p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
@@ -331,15 +281,29 @@ title: Home
     </div>
 
   </div>
+
+  <p><sup>FA</sup> indicates first Author contribution.
+   <br /><sup>EQ</sup> indicates equal contribution.</p>
 </div>
 
 
 <!-- ========== talks ========== -->
 <div class="docs-section" id="talks">
   <h4>Talks</h4>
-  {% assign talks = site.data.publications.papers %}
-  {% for talk in talks %}
-  <p><b>{{ talk.title }}</b> ({{ talk.venue }})</p>
+  {% for talk in site.data.talks.talks %}
+  {% if talk.url %}
+   <a href="{{ talk.url }}" target="_blank">
+    <div class="paper">
+      <p class="title"><b>{{ talk.title }}</b></p>
+      <p><sup><b>{{ talk.tag }}</b></sup>{{ talk.location }} ({{ talk.year }})</p>
+    </div>
+  </a>
+  {% else %}
+    <div class="paper">
+      <p class="title"><b>{{ talk.title }}</b></p>
+      <p><sup><b>{{ talk.tag }}</b></sup>{{ talk.location }} ({{ talk.year }})</p>
+    </div>
+  {% endif %}
   {% endfor %}
 </div>
 
@@ -347,7 +311,7 @@ title: Home
 <div class="docs-section" id="mentee">
   <h4>Mentee</h4>
   <p>
-    <b><a href="https://dthain.github.io/">Douglas Thain</a></b> (University of Notre Dame), Aug 2025 - Present<br>
+    <b><a href="https://dthain.github.io/">Prof. Douglas Thain</a></b> (University of Notre Dame), Aug 2025 - Present<br>
     <b><a href="https://ankit.website/">Dr. Ankit Agarwal</a></b> (Saint Louis University), Jul 2024 - Aug 2025<br>
   </p>
 
@@ -407,5 +371,35 @@ title: Home
 
   <script type="application/json" id="collaboration-graph-links">
     {{ site.data.collaborations.links | jsonify }}
+  </script>
+</div>
+
+<!-- ========== SKILLS GRAPH ========== -->
+<div class="docs-section" id="skills_graph">
+  <h4>Skills Graph</h4>
+
+  <p>
+    This graph shows my Technical Skills, Expertise with tools and technologies.
+    Drag nodes to rearrange the graph. Hover over a node or connection for details.
+  </p>
+
+  <div class="collaboration-graph-toolbar">
+    <button class="button" id="skills-graph-reset">Reset View</button>
+  </div>
+
+  <div id="skills-graph" class="collaboration-graph"></div>
+
+  <div class="collaboration-graph-legend" id="skills-graph-legend"></div>
+
+  <script type="application/json" id="skills-graph-nodes">
+    {{ site.data.skills.nodes | jsonify }}
+  </script>
+
+  <script type="application/json" id="skills-graph-groups">
+    {{ site.data.skills.groups | jsonify }}
+  </script>
+
+  <script type="application/json" id="skills-graph-links">
+    {{ site.data.skills.links | jsonify }}
   </script>
 </div>

@@ -1,8 +1,10 @@
 papers:
   - title: "SADE-SIM: A Scalable Simulation Platform for Validating City-Scale Multi-sUAS Missions"
     authors: "Laxminarayana Vadnala, Lucas Parzianello, Bohan Zhang, Michael Murphy, Ankit Agrawal, Douglas Thain"
-    venue: "SE4ES 2026"
+    venue: "FSE Companion '26: Proceedings of the 34th ACM International Conference on the Foundations of Software Engineering (SE4ES 2026)"
     paper_pdf: "https://dl.acm.org/doi/abs/10.1145/3803437.3805540"
-    # code: "https://github.com/UNITES-Lab/flex-moe"
+    # code: ""
     year: "2026"
     tag: "FA"
+    doi: "https://doi.org/10.1145/3803437.3805540"
+    preprint: false
