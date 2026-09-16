@@ -7,37 +7,87 @@ title: Home
   <h4>Bio</h4>
 
   <p>
-    I am an <b><u>upcoming Ph.D Student</u></b> in <b><u>Computer Science</u></b>, at
-    <b><u>Univeristy of Notre Dame</u>, South Bend, IN</b>.
-    I am currently working as a Graduate Research Assistant at the <a href="https://ankit.website/lab" target="_blank">
-      sUAS—Human-Centered Computing Lab (sUAS HCC) </a>,
-    advised by <a href="https://ankit.website/aboutme" target="_blank">Dr. Ankit Agarwal</a>,
-    in collaboration with the <a href="https://ccl.cse.nd.edu/" target="_blank"> Cooperative Computing Lab </a>, advised
-    by
-    <a href="https://dthain.github.io/" target="_blank">Prof. Dr. Douglas Thain</a> from the <b><u>University of Notre
-        Dame</u></b>.
-    Prior to my Master's studies at SLU, I worked as a <b>Solution Architect</b> at <b>Southwest Airlines</b>, a
-    <b>Senior Software Engineer</b> at <b>Qualcomm</b>,
-    and in other roles across different companies for over 4 years.
-
+      I am a <b><u>Second-year Ph.D. student in Computer Science at the University of Notre Dame</u></b>,
+      where my research focuses on scalable systems, High-Performance Computing (HPC), distributed systems,
+      Linux systems, and infrastructure for both Scientific and AI workloads.
+      I am currently resarching at the <a href="https://ccl.cse.nd.edu/" target="_blank">
+          Cooperative Computing Lab </a>, advised by
+      <a href="https://dthain.github.io/" target="_blank">Prof. Dr. Douglas Thain</a>.
   </p>
 
   <p>
-    My current research interests focus on integrating <b>High-Performance Computing</b> with <b>Human-Computer
-      Interaction</b>,
-    specifically in the context of simulation or real-world applications.
-  <ol>
-    <li>Currently working on Small Unmanned
-      Aircraft Systems (sUAS) simulations, but I am eager to apply the benefits of <b>High-Performance Computing</b> to
-      other
-      <b>Human-Computer Interaction</b> systems as well.
-    </li>
-    <li> Focusing on the <b>Computer Vision</b> advancements and integrating
-      these advancements to improvise the Human-Computer interaction systems at high scale</li>
-    <li>Am also focusing on
-      improving the capabilities of currently exisiting approached of High Performance Computing.</li>
-  </ol>
+      A major direction of my current research is <b><u>distributed GPU computing and resource management for AI workloads</u></b>.
+      I am working on a <b><u>user-space distributed GPU execution and resource-management system</u></b> that explores mechanisms
+      similar in spirit to technologies such as NVIDIA MPS, while extending the idea toward distributed and high-throughput computing environments.
+      The goal is to integrate this work with <b><u>TaskVine</u></b>, enabling researchers and practitioners to more efficiently
+      utilize GPU resources for workloads such as <b><u>LLM training, inference, and other GPU-intensive AI applications</u></b>.
   </p>
+
+  <p>
+      This work currently focuses on <b><u>Linux and NVIDIA GPUs</u></b>, with an emphasis on understanding and managing GPU resources from user space
+      while interacting closely with operating-system mechanisms and the underlying GPU runtime. In the longer term,
+      I am interested in extending these ideas beyond a single GPU vendor and investigating runtime capabilities inspired by modern AI-serving
+      and inference systems such as <b><u>vLLM and llm-d</u></b>. Areas I am exploring include efficient GPU sharing, workload scheduling,
+      distributed inference, resource isolation, dynamic allocation, batching, and improving GPU utilization across collections of AI tasks.
+  </p>
+
+   <p>
+  Another major part of my research involves building and studying <b><u>large-scale simulation and computing systems</u></b>,
+  particularly through the <b><u>Safety-Aware Drone Ecosystem (SADE)</u></b> project. SADE combines multiple simulation and autonomy components
+  to support large-scale sUAS experiments, and my work focuses on improving the scalability, reliability, observability, and resource efficiency of the overall system.
+</p>
+   <p>
+  A growing part of this work focuses on <b><u>Linux systems and kernel internals</u></b>. I work with mechanisms and interfaces such as
+  <b><u>ProcFS (<code>/proc</code>), Control Groups (<code>/sys/fs/cgroup</code>), process hierarchies, memory accounting, CPU utilization, container isolation, namespaces,
+  and GPU resource monitoring</u></b> to understand how complex applications consume system resources at runtime. I have been
+  developing lightweight observability and systems-analysis tools in <b><u>Rust</u></b> that reconstruct process hierarchies, correlate
+  processes with containers, and track CPU, memory, and GPU behavior throughout the lifetime of distributed workloads.
+   </p>
+   <p>
+      As part of my upcoming work on SADE, I am investigating how information exposed through ProcFS (<code>/proc</code>) and other
+      Linux interfaces can be used to reconstruct and visualize the complete lifecycle of active processes. This includes
+      understanding parent-child process relationships, container membership, memory consumption, CPU behavior, and GPU utilization
+      as workloads evolve. The broader goal is to make the internal behavior of large distributed applications easier to visualize,
+      diagnose, and optimize as they scale.
+   </p>
+   <p>
+      I also began my journey as a <b><u>Linux kernel contributor</u></b>. Through this effort, I hope to develop a deeper
+      understanding of kernel subsystems and contribute upstream over time. I am particularly interested in running the mainline linux kernel on the variuos used android mobiles
+     and build a cluster by connecting them as mesh nodes. Areas related to <b><u>process management,
+      resource control, scheduling, memory management, cgroups, observability, performance, and interactions between the Linux kernel and accelerator-based workloads</u></b>.
+   </p>
+   <p>
+      More broadly, my research is driven by a systems question: <b><u>how can we make large-scale computing resources easier to
+      share, observe, and utilize efficiently?</u></b> I am particularly interested in problems at the intersection of <b><u>HPC and AI
+      infrastructure</u></b>, including how clusters containing CPUs and GPUs can support increasingly dynamic AI and scientific workloads
+      without sacrificing utilization, isolation, performance, or scalability.
+   </p>
+   <p>
+      Prior to my Ph.D., I worked in industry for more than four years, including roles as a <b><u>Solution Architect at
+      Southwest Airlines</u></b> and a <b><u>Senior Software Engineer at Qualcomm</u></b>, along with other software engineering roles.
+      My industry experience, combined with my current systems research, has shaped my interest in building computing systems
+      that are not only scalable in principle but also practical, observable, and reliable in real-world environments.
+   </p>
+   <p>
+      My broader research interests include:
+   </p>
+   <ol>
+      <li>Distributed GPU Computing and GPU Resource Management</li>
+      <li>Systems for AI, LLM Training, and Inference</li>
+      <li>High-Performance and High-Throughput Computing</li>
+      <li>Distributed and Scalable Systems</li>
+      <li>Linux Kernel and Operating Systems</li>
+      <li>Performance Engineering and Systems Observability</li>
+      <li>GPU Scheduling, Sharing, and Heterogeneous Computing</li>
+      <li>Container and Resource Management</li>
+      <li>Large-Scale Simulation Systems</li>
+   </ol>
+   <p>
+      I am actively seeking <b><u>Research internships for 2027</u></b> at <b><u>national laboratories and research-oriented technology companies</u></b>,
+      particularly opportunities involving <b><u>HPC, distributed systems, GPU systems, Linux/operating systems, AI infrastructure, LLM systems,
+      performance engineering, or large-scale computing</u></b>. I am especially interested in research problems involving the design of systems that
+      allow <b><u>AI and scientific workloads to efficiently utilize distributed CPU and GPU resources at scale</u></b>.
+   </p>
 
 </div>
 
@@ -59,8 +109,6 @@ title: Home
     <p></p>
   </div>
 
-  
-
 </div>
 
 <!-- ========== NEWS ========== -->
@@ -69,13 +117,10 @@ title: Home
 
   <ul class="tab-nav">
     <li>
-      <div class="button active" data-ref="#news-2025">2025</div>
+      <div class="button active" data-ref="#news-current">Current Year</div>
     </li>
     <li>
-      <div class="button" data-ref="#news-2024">2024</div>
-    </li>
-    <li>
-      <div class="button" data-ref="#news-2023-past">2023-Past</div>
+      <div class="button" data-ref="#news-past">Past Years</div>
     </li>
   </ul>
 
@@ -83,30 +128,43 @@ title: Home
 
   <div class="tab-content">
 
-    <div class="tab-pane active" id="news-2025">
-      {% assign news2025 = site.data.news.news | where: "year", "2025" %}
-      {% for news in news2025 %}
-      <div class="news">
-        <li>{{ news.content }}</li>
+      <div class="tab-pane active" id="news-current">
+        {% assign newsCurrent = site.data.news.news | where: "filter_tag", "current" %}
+        {% for news in newsCurrent %}
+        <div class="news">
+          <div class="news-meta">
+            <span class="news-date">{{ news.date }}</span>
+            <span class="news-tag news-tag-{{ news.group_tag | downcase }}">
+              {{ news.group_tag }}
+            </span>
+          </div>
+      
+          <div class="news-content">
+            {{ news.content }}
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
 
-    <div class="tab-pane" id="news-2024">
-      {% assign news2024 = site.data.news.news | where: "year", "2024" %}
-      {% for news in news2024 %}
-      <div class="news">
-        <li>{{ news.content }}</li>
+
+      <div class="tab-pane" id="news-past">
+        {% assign newsPast = site.data.news.news | where: "filter_tag", "past" %}
+        {% for news in newsPast %}
+        <div class="news">
+          <div class="news-meta">
+            <span class="news-date">{{ news.date }}</span>
+            <span class="news-tag news-tag-{{ news.group_tag | downcase }}">
+              {{ news.group_tag }}
+            </span>
+          </div>
+      
+          <div class="news-content">
+            {{ news.content }}
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
 
-    <div class="tab-pane" id="news-2023-past">
-      {% assign news2023 = site.data.news.news | where: "year", "past" %}
-      {% for news in news2023 %}
-      <li>{{ news.content }}</li>
-      {% endfor %}
-    </div>
 
   </div>
 </div>
@@ -213,15 +271,16 @@ title: Home
 
   <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google
       Scholar</a>.<br />
-    <sup><b>*</b></sup> indicates equal contribution.
+    <sup><b>FA</b></sup> indicates first Author contribution.<br />
+    <sup><b>EQ</b></sup> indicates equal contribution.<br />
   </p>
 
   <ul class="tab-nav">
-    <li>
+    <!--<li>
       <div class="button" data-ref="#papers-preprint">Preprint</div>
-    </li>
+    </li>-->
     <li>
-      <div class="button active" data-ref="#papers-2024">2024-past</div>
+      <div class="button active" data-ref="#papers-2026">2026</div>
     </li>
     <li>
       <div class="button" data-ref="#papers-all">All</div>
@@ -230,19 +289,19 @@ title: Home
 
   <div class="tab-content">
     <!-- <div class="tab-pane"> -->
-    <div class="paper">
-      <p class="title"><b>Working on it!</b></p>
-    </div>
+    <!--<div class="paper">-->
+      <!--<p class="title"><b>Working on it!</b></p>
+    </div>-->
     <!-- </div>  -->
 
-    <!-- Tab: Preprint -->
+    <!-- Tab: 2026 -->
 
-    <!-- <div class="tab-pane" id="papers-preprint">
-      {% assign paperspreprint = site.data.publications.papers | where: "year", "preprint" %}
-      {% for paper in paperspreprint %}
+    <div class="tab-pane active" id="papers-2026">
+      {% assign papers2026 = site.data.publications.papers | where: "year", "2026" %}
+      {% for paper in papers2026 %}
       <div class="paper">
         <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors }}</p>
+        <p><sup><b>{{ paper.tag }}</b></sup>{{ paper.authors }}</p>
         <p><i>{{ paper.venue }}</i></p>
         <div class="paper-buttons">
           {% if paper.paper_pdf %}
@@ -254,33 +313,11 @@ title: Home
         </div>
       </div>
       {% endfor %}
-    </div> -->
-
-    <!-- Tab: 2024 -->
-
-    <!-- <div class="tab-pane active" id="papers-2024">
-      {% assign papers2024 = site.data.publications.papers | where: "year", "2024" %}
-      {% for paper in papers2024 %}
-      <div class="paper">
-        <p class="title"><b>{{ paper.title }}</b></p>
-        <p>{{ paper.authors }}</p>
-        <p><i>{{ paper.venue }}</i></p>
-        <div class="paper-buttons">
-          {% if paper.paper_pdf %}
-          <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-          {% endif %}
-          {% if paper.code %}
-          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div> -->
+    </div>
 
     <!-- Tab: papers all -->
 
-
-    <!-- <div class="tab-pane" id="papers-all">
+    <div class="tab-pane" id="papers-all">
       {% assign papersall = site.data.publications.papers %}
       {% for paper in papersall %}
       <div class="paper">
@@ -297,17 +334,27 @@ title: Home
         </div>
       </div>
       {% endfor %}
-    </div> -->
+    </div>
 
   </div>
+</div>
+
+
+<!-- ========== talks ========== -->
+<div class="docs-section" id="talks">
+  <h4>Talks</h4>
+  {% assign talks = site.data.publications.papers %}
+  {% for talk in talks %}
+  <p><b>{{ talk.title }}</b> ({{ talk.venue }})</p>
+  {% endfor %}
 </div>
 
 <!-- ========== Mentee ========== -->
 <div class="docs-section" id="mentee">
   <h4>Mentee</h4>
   <p>
-    <b>Dr. Ankit Agarwal</b> (Saint Louis University), Jul 2024 - Present<br>
-    <!-- <b>Douglas Thain</b> (UND), Aug 2024 - <br> -->
+    <b><a href="https://dthain.github.io/">Douglas Thain</a></b> (University of Notre Dame), Aug 2025 - Present<br>
+    <b><a href="https://ankit.website/">Dr. Ankit Agarwal</a></b> (Saint Louis University), Jul 2024 - Aug 2025<br>
   </p>
 
 </div>
@@ -337,4 +384,34 @@ title: Home
     </li>
     {% endfor %}
   </ul>
+</div>
+
+<!-- ========== COLLABORATION GRAPH ========== -->
+<div class="docs-section" id="connection_graph">
+  <h4>Collaboration Graph</h4>
+
+  <p>
+    This graph shows my collaborators, advisors, institutions, research labs, and major projects.
+    Drag nodes to rearrange the graph. Hover over a node or connection for details.
+  </p>
+
+  <div class="collaboration-graph-toolbar">
+    <button class="button" id="collaboration-graph-reset">Reset View</button>
+  </div>
+
+  <div id="collaboration-graph" class="collaboration-graph"></div>
+
+  <div class="collaboration-graph-legend" id="collaboration-graph-legend"></div>
+
+  <script type="application/json" id="collaboration-graph-nodes">
+    {{ site.data.collaborations.nodes | jsonify }}
+  </script>
+
+  <script type="application/json" id="collaboration-graph-groups">
+    {{ site.data.collaborations.groups | jsonify }}
+  </script>
+
+  <script type="application/json" id="collaboration-graph-links">
+    {{ site.data.collaborations.links | jsonify }}
+  </script>
 </div>
